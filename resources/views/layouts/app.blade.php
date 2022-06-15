@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Laravel</title>
     <head>
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/app.js')}}" defer></script>
 </head>
 <body>
-<header><!-- Your header code here --></header>
+@include('partials.header')
+    
+
 <main>
   <!-- Yield the main page content -->
   @yield('content')
 </main>
-<footer>
-  <!-- Your footer code here -->
-</footer>
+@include('partials.footer')
+
 </body>
 </html>

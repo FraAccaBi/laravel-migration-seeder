@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+});
 Route::get('trips', 'TripController@index')->name('trip');
 Route::get('trips/{trip}', 'TripController@show')->name('trip');

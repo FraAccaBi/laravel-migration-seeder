@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Trip;
+use App\Models\Trip;
 use Illuminate\Http\Request;
 
 class TripController extends Controller
@@ -15,8 +15,8 @@ class TripController extends Controller
     public function index()
     {
         $trips = Trip::all();
-        
-        return view('tripss.index',compact('trips'));
+        //dd($trips);
+        return view('home',compact('trips'));
     }
 
     /**
